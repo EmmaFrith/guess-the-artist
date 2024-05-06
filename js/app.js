@@ -21,8 +21,9 @@ const questionFiveArtists = ['Matisse', 'Derain', 'Delauney', 'Braque']
 
 
 
-
 /*---------- Variables (state) ---------*/
+
+let userChoice = null;
 
 
 
@@ -30,6 +31,10 @@ const questionFiveArtists = ['Matisse', 'Derain', 'Delauney', 'Braque']
 
 const nextQuestionButton = document.querySelector('#next-question-button')
 nextQuestionButton.addEventListener('click', goToNextQuestion2)
+
+
+const userChoiceOption2 = document.querySelector('#option2')
+option2.addEventListener('click', checkIfCorrect)
 
 
 // /*-------------- Functions -------------*/
@@ -40,10 +45,16 @@ function goToNextQuestion2 () {
     option3.innerText = questionTwoArtists[2];
     option4.innerText = questionTwoArtists[3];
     img.src = 'https://d3d00swyhr67nd.cloudfront.net/_source/artuk_stories/paulklee-725px-1.jpg';
+    document.getElementById("correct").innerHTML = ""
 }
 
 
-
+function checkIfCorrect () {
+    if(userChoiceOption2) {
+        score.innerText = "1/5"
+        document.getElementById("correct").innerHTML = "Correct 🎉"
+    } 
+}
 
 /*----------- Event Listeners ----------*/
 
