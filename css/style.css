@@ -33,11 +33,6 @@ header {
   flex-direction: column;
 }
 
-#container-correct-score {
-  display: flex;
-  flex-direction: column;
-}
-
 #container-question {
     padding: 20px;
     margin-top: 50px;
@@ -49,6 +44,10 @@ header {
 #container-image {
     display: flex;
     justify-content: center;
+}
+
+img {
+    width: 750px;
 }
 
 button {
