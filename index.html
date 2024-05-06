@@ -12,43 +12,51 @@
 <body>
 
     <header>
-        <h1 id="game-name">Guess the artist 🎨</h1>
+        <h1 id="game-name">Guess the artist </h1>
     </header>
 
-    <div id="question">
-        <h2>Which artist is this?</h2>
+
+    <div id="main-container">
+
+        <div id="container-question-painting-buttons">
+
+            <div id="container-question">
+                <h2>Which artist is this?</h2>
+            </div>
+
+            <div id="container-image">
+                <img src="https://uploads7.wikiart.org/images/paul-gauguin/tahitian-mountains-1893.jpg!Large.jpg"
+                    alt="A Gaugin painting with mountains.">
+            </div>
+
+            <br>
+
+            <div id="container-multiple-choice-buttons">
+                <button type="button" id="option1">Van Gogh</button>
+                <button type="button" id="option2">Gauguin</button>
+                <button type="button" id="option3">Cézanne</button>
+                <button type="button" id="option4">Renoir</button>
+            </div>
+
+            <div id="container-next-question">
+                <button type="button" id="next-question-button">Next question</button>
+            </div>
+
+        </div>
+
+        <div id="container-correct-score">
+
+            <div id="container-scoreboard">
+                <h2 id="score-h2">Your score</h2>
+                <p id="score">0/5</p>
+            </div>
+
+            <div id="container-answer">
+                <p>Correct 🎉 </p>
+            </div>
+
+        </div>
     </div>
-
-    <div id="image">
-        <img src="https://uploads7.wikiart.org/images/paul-gauguin/tahitian-mountains-1893.jpg!Large.jpg"
-            alt="A Gaugin painting with mountains.">
-    </div>
-
-    <br>
-
-    <div id="multiple-choice">
-        <button type="button" id="option1">Van Gogh</button>
-        <button type="button" id="option2">Gauguin</button>
-        <button type="button" id="option3">Cézanne</button>
-        <button type="button" id="option4">Renoir</button>
-    </div>
-
-    <div id="answer">
-        <p>Correct 🎉 </p>
-    </div>
-
-
-    <div id="next-question">
-        <button type="button" id="next">Next question</button>
-    </div>
-
-
-    <div id="scoreboard">
-        <h2>Your score</h2>
-        <p id="score">1/5</p>
-    </div>
-
-
 </body>
 
 </html>
