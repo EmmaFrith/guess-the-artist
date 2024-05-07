@@ -13,7 +13,7 @@ const artists = [
 
 let currentQuestionIndex = 0;
 let userChoice = null;
-let corect = null;//true or false
+let correct = null;//true or false
 let score = 0;
 
 /*----- DOM/event listeners  -----*/
@@ -53,24 +53,16 @@ function goToNextQuestion() {
         //make the correct/incorrect string go empty
         document.getElementById("correct").innerHTML = ""
     }
-    //console.log(artists[currentQuestionIndex])
 }
 
 
 
 function checkIfCorrect() {
-    //     if(//userChoice is correct) {
-    //         score.innerText = //score++  
-    //         //
-    //         document.getElementById("correct").innerHTML = "Correct 🎉"
-    //     } 
-    //     // else "Incorrect"
-
-
-// console.log(artists[currentQuestionIndex].correctArtist)
-// currentQuestionIndex = currentQuestionIndex + 1
-// console.log(artists[currentQuestionIndex].correctArtist)
-
-
+    //console.log(this.innerText)
+    if (this.innerText === artists[currentQuestionIndex].correctArtist)
+    //console.log("true")
+    {score = score + 1
+    console.log(score)
+    document.querySelector('#score').innerHTML = score
+    document.getElementById("correct").innerHTML = "Correct 🎉"}
 }
-
