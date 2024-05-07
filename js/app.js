@@ -39,7 +39,8 @@ const option4 = document.querySelector('#option4')
 option4.addEventListener('click', checkIfCorrect)
 
 
-const audioPlayer = document.querySelector('audio')
+const positiveAudioPlayer = document.querySelector('#positive-audio')
+const negativeAudioPlayer = document.querySelector('#negative-audio')
 
 // /*-------------- Functions -------------*/
 
@@ -67,10 +68,11 @@ function checkIfCorrect() {
         console.log(score)
         document.querySelector('#score').innerHTML = score
         document.getElementById("correct").innerHTML = "Correct 🎉"
-        audioPlayer.play()
+        positiveAudioPlayer.play()
     }
     else {
         document.getElementById("correct").innerHTML = `Incorrect ❌ <br> it was ${artists[currentQuestionIndex].correctArtist}`
+        negativeAudioPlayer.play()
     }
 }
 
