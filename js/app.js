@@ -65,4 +65,7 @@ function checkIfCorrect() {
     console.log(score)
     document.querySelector('#score').innerHTML = score
     document.getElementById("correct").innerHTML = "Correct 🎉"}
+    else {
+        document.getElementById("correct").innerHTML = `Incorrect ❌ <br> it was ${artists[currentQuestionIndex].correctArtist}`
+    }
 }
