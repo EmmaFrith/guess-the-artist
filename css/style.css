@@ -92,6 +92,11 @@ button {
     padding: 30px;
 }
 
+#container-score {
+    display: flex;
+    flex-direction: row;
+}
+
 #score-h2 {
   margin-bottom: 0px;
   margin-top: 0px;
