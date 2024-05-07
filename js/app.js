@@ -3,7 +3,7 @@
 const artists = [
     { artist1: 'Van Gogh', artist2: 'Gauguin', artist3: 'Cézanne', artist4: 'Renoir', image: 'https://uploads7.wikiart.org/images/paul-gauguin/tahitian-mountains-1893.jpg!Large.jpg', correctArtist: 'Gauguin' },
     { artist1: 'Klimt', artist2: 'Klee', artist3: 'Chagall', artist4: 'Miro', image: 'https://d3d00swyhr67nd.cloudfront.net/_source/artuk_stories/paulklee-725px-1.jpg', correctArtist: 'Klee' },
-    { artist1: 'Sisley', artist2: 'Manet', artist3: 'Monet', artist4: 'Seurat', image: 'https://d3d00swyhr67nd.cloudfront.net/w800h800/collection/NGS/NGS/NGS_NGS_NG_2235-001.jpg', correctArtist:'Sisley' },
+    { artist1: 'Sisley', artist2: 'Manet', artist3: 'Monet', artist4: 'Seurat', image: 'https://d3d00swyhr67nd.cloudfront.net/w800h800/collection/NGS/NGS/NGS_NGS_NG_2235-001.jpg', correctArtist: 'Sisley' },
     { artist1: 'Whistler', artist2: 'Monet', artist3: 'Pisarro', artist4: 'Turner', image: 'https://www.theartstory.org/images20/works/whistler_james_abbott_mcneill_2.jpg?1', correctArtist: 'Whistler' },
     { artist1: 'Matisse', artist2: 'Derain', artist3: 'Delauney', artist4: 'Braque', image: 'https://d26jxt5097u8sr.cloudfront.net/s3fs-public/Full_matisse2.jpg', correctArtist: 'Derain' }
 ]
@@ -39,6 +39,8 @@ const option4 = document.querySelector('#option4')
 option4.addEventListener('click', checkIfCorrect)
 
 
+const audioPlayer = document.querySelector('audio')
+
 // /*-------------- Functions -------------*/
 
 function goToNextQuestion() {
@@ -59,13 +61,19 @@ function goToNextQuestion() {
 
 function checkIfCorrect() {
     //console.log(this.innerText)
-    if (this.innerText === artists[currentQuestionIndex].correctArtist)
-    //console.log("true")
-    {score = score + 1
-    console.log(score)
-    document.querySelector('#score').innerHTML = score
-    document.getElementById("correct").innerHTML = "Correct 🎉"}
+    if (this.innerText === artists[currentQuestionIndex].correctArtist) {
+        //console.log("true")
+        score = score + 1
+        console.log(score)
+        document.querySelector('#score').innerHTML = score
+        document.getElementById("correct").innerHTML = "Correct 🎉"
+        audioPlayer.play()
+    }
     else {
         document.getElementById("correct").innerHTML = `Incorrect ❌ <br> it was ${artists[currentQuestionIndex].correctArtist}`
     }
 }
+
+
+
+
