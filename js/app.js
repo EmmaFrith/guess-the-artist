@@ -17,15 +17,22 @@ const artists = [
 
 
 let currentQuestionIndex = 0;
-let userChoice = null;
+//let userChoice = null;
 let score = 0;
 
 /*----- DOM/event listeners  -----*/
 
 
+
+const scoreDisplay = document.querySelector('#score')
+
 //a query selector and event listener on the next question button
 const nextQuestionButton = document.querySelector('#next-question-button')
 nextQuestionButton.addEventListener('click', goToNextQuestion)
+
+
+const playAgainButton = document.querySelector('#play-again-button')
+playAgainButton.addEventListener('click', playAgain)
 
 
 
@@ -49,10 +56,10 @@ const negativeAudioPlayer = document.querySelector('#negative-audio')
 // /*-------------- Functions -------------*/
 
 function goToNextQuestion() {
-        option1.disabled = false;
-        option2.disabled = false;
-        option3.disabled = false;
-        option4.disabled = false;
+    option1.disabled = false;
+    option2.disabled = false;
+    option3.disabled = false;
+    option4.disabled = false;
     if (currentQuestionIndex < 9) {
         currentQuestionIndex = currentQuestionIndex + 1
         option1.innerText = artists[currentQuestionIndex].artist1;
@@ -63,22 +70,34 @@ function goToNextQuestion() {
         //make the correct/incorrect string go empty
         document.getElementById("correct").innerHTML = ""
     }
-    if (currentQuestionIndex === 9) {
-        nextQuestionButton.innerText = "Play again"
-    }
+    else { currentQuestionIndex = 0 }
 }
 
+function endGame() {
+    nextQuestionButton.classList.add("hidden");
+    playAgainButton.classList.remove("hidden");
 
+}
+
+function playAgain() {
+    currentQuestionIndex = 0 - 1;
+    score = 0;
+    console.log(currentQuestionIndex)
+    nextQuestionButton.classList.remove("hidden");
+    playAgainButton.classList.add("hidden");
+    goToNextQuestion();
+    scoreDisplay.innerHTML = score
+}
 
 function checkIfCorrect() {
-        option1.disabled = true;
-        option2.disabled = true;
-        option3.disabled = true;
-        option4.disabled = true;
+    option1.disabled = true;
+    option2.disabled = true;
+    option3.disabled = true;
+    option4.disabled = true;
     if (this.innerText === artists[currentQuestionIndex].correctArtist) {
         score = score + 1
         console.log(score)
-        document.querySelector('#score').innerHTML = score
+        scoreDisplay.innerHTML = score
         document.getElementById("correct").innerHTML = "Correct 🎉"
         positiveAudioPlayer.play()
     }
@@ -86,7 +105,12 @@ function checkIfCorrect() {
         document.getElementById("correct").innerHTML = `Incorrect ❌ <br> it was ${artists[currentQuestionIndex].correctArtist}`
         negativeAudioPlayer.play()
     }
+    if (currentQuestionIndex >= 9) {
+        endGame();
+    }
 }
+
+
 
 
 
