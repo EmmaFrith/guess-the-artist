@@ -13,7 +13,6 @@ const artists = [
 
 let currentQuestionIndex = 0;
 let userChoice = null;
-let correct = null;//true or false
 let score = 0;
 
 /*----- DOM/event listeners  -----*/
@@ -45,7 +44,10 @@ const negativeAudioPlayer = document.querySelector('#negative-audio')
 // /*-------------- Functions -------------*/
 
 function goToNextQuestion() {
-    //access the next object in the array
+        option1.disabled = false;
+        option2.disabled = false;
+        option3.disabled = false;
+        option4.disabled = false;
     if (currentQuestionIndex < 4) {
         currentQuestionIndex = currentQuestionIndex + 1
         option1.innerText = artists[currentQuestionIndex].artist1;
@@ -61,9 +63,11 @@ function goToNextQuestion() {
 
 
 function checkIfCorrect() {
-    //console.log(this.innerText)
+        option1.disabled = true;
+        option2.disabled = true;
+        option3.disabled = true;
+        option4.disabled = true;
     if (this.innerText === artists[currentQuestionIndex].correctArtist) {
-        //console.log("true")
         score = score + 1
         console.log(score)
         document.querySelector('#score').innerHTML = score
@@ -75,6 +79,9 @@ function checkIfCorrect() {
         negativeAudioPlayer.play()
     }
 }
+
+
+
 
 
 
