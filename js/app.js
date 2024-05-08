@@ -22,7 +22,7 @@ let score = 0;
 
 /*----- DOM/event listeners  -----*/
 
-
+const resultText = document.querySelector('#result')
 
 const scoreDisplay = document.querySelector('#score')
 
@@ -76,7 +76,12 @@ function goToNextQuestion() {
 function endGame() {
     nextQuestionButton.classList.add("hidden");
     playAgainButton.classList.remove("hidden");
-
+    if (score < 6) {
+        resultText.innerText = 'This was hard'
+    }
+    else {
+        resultText.innerText = 'You’re good at this'
+    }
 }
 
 function playAgain() {
@@ -87,6 +92,7 @@ function playAgain() {
     playAgainButton.classList.add("hidden");
     goToNextQuestion();
     scoreDisplay.innerHTML = score
+    resultText.innerText = ''
 }
 
 function checkIfCorrect() {

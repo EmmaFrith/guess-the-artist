@@ -31,6 +31,7 @@ header {
 #container-question-painting-buttons {
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
 }
 
 #container-question {
@@ -112,5 +113,16 @@ button {
 
 .hidden {
     display: none;
+}
+
+#container-result-text {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+#play-again-button {
+    background-color: #AAEAAA;
+    border: none;
 }
 
