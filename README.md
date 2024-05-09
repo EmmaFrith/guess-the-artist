@@ -12,7 +12,12 @@ I built this quiz as I enjoy art and identifying art based on its style.
 
 The game features 10 paintings, each with 4 multiple choice answers. 
 
-After selecting a choice, you'll receive a 'correct' or 'incorrect' message. There is also a sound associated with each. 
+After selecting a choice, there is:
+
+* a 'correct' or 'incorrect' message
+* a different sound depending on whether you're correct or not 
+
+You can only guess once for each question.
 
 Your score will go up by one with each correct answer. 
 
@@ -41,7 +46,18 @@ I used Excalidraw to design and pseudocode this game.
 ![Screenshot showing how I planned the game](./images/planning-the-quiz.png)
 
 
-## Attributions 
+## Attributions
+
+The images are taken from the following websites:
+
+* WikiArt
+* Art UK
+* The Art Story
+* The National Gallery of Art
+* The Bookroom Art Press
+* Christies
+* Park West Gallery
+* Wikepedia 
 
 
 ## Future enhancements
@@ -49,3 +65,5 @@ I used Excalidraw to design and pseudocode this game.
 This MVP can be enhanced by adding more paintings and randomising the paintings shown each time you play. 
 
 It could also feature more themes, such as 'Guess the movemenent'. 
+
+The layout and design also needs some improvement - for example the 
