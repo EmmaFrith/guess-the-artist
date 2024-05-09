@@ -119,6 +119,7 @@ button {
     display: flex;
     justify-content: center;
     font-size: 25px;
+    margin-bottom: 100px;
 }
 
 #play-again-button {

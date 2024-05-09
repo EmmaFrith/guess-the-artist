@@ -26,17 +26,12 @@ const resultText = document.querySelector('#result')
 
 const scoreDisplay = document.querySelector('#score')
 
-//a query selector and event listener on the next question button
 const nextQuestionButton = document.querySelector('#next-question-button')
 nextQuestionButton.addEventListener('click', goToNextQuestion)
-
 
 const playAgainButton = document.querySelector('#play-again-button')
 playAgainButton.addEventListener('click', playAgain)
 
-
-
-//a query selector and event listener on every multiple choice button
 const option1 = document.querySelector('#option1')
 option1.addEventListener('click', checkIfCorrect)
 
@@ -49,8 +44,8 @@ option3.addEventListener('click', checkIfCorrect)
 const option4 = document.querySelector('#option4')
 option4.addEventListener('click', checkIfCorrect)
 
-
 const positiveAudioPlayer = document.querySelector('#positive-audio')
+
 const negativeAudioPlayer = document.querySelector('#negative-audio')
 
 // /*-------------- Functions -------------*/
@@ -67,10 +62,11 @@ function goToNextQuestion() {
         option3.innerText = artists[currentQuestionIndex].artist3;
         option4.innerText = artists[currentQuestionIndex].artist4;
         img.src = artists[currentQuestionIndex].image;
-        //make the correct/incorrect string go empty
         document.getElementById("correct").innerHTML = ""
     }
-    else { currentQuestionIndex = 0 }
+    else {
+        endGame()
+    }
 }
 
 function endGame() {
@@ -87,7 +83,6 @@ function endGame() {
 function playAgain() {
     currentQuestionIndex = 0 - 1;
     score = 0;
-    console.log(currentQuestionIndex)
     nextQuestionButton.classList.remove("hidden");
     playAgainButton.classList.add("hidden");
     goToNextQuestion();
