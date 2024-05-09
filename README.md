@@ -27,9 +27,16 @@ At the end of the game you'll recieve a personalised message based on how many a
 ## Screenshots
 
 ![Screenshot showing a correct answer screen.](./images/correct-answer-display.png)
+Screenshot showing a correct result.
+
 ![Screenshot showing an incorrect answer screen.](./images/incorrect-answer.png)
+Screenshot showing an incorrect result on a smaller screen such as an iPad.
+
 ![Screenshot showing a personalised message.](./images/personalised-message.png)
+Screenshot showing the end of the game when you got more than 6 correct answers. 
+
 ![Screenshot showing the responsive design.](./images/responsive-design.png)
+Screenshot showing the responsive design. 
 
 
 ## Technologies used
@@ -66,4 +73,4 @@ This MVP can be enhanced by adding more paintings and randomising the paintings 
 
 It could also feature more themes, such as 'Guess the movemenent'. 
 
-The layout and design also needs some improvement - for example the 
+The design also needs improvement as there is some movement when navigating between questions. 
