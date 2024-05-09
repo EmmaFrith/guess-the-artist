@@ -1,21 +1,20 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Serif+Text:ital@0;1&display=swap');
 
 
 body {
-  margin: 0;
-  font-family: 'DM Serif Text', sans-serif;
+    margin: 0;
+    font-family: 'DM Serif Text', sans-serif;
 }
 
 header {
-  background: black;
-  color: white;
-  padding: 10px 40px;
-  margin: 0px;
+    background: black;
+    color: white;
+    padding: 10px 40px;
+    margin: 0px;
 }
 
 #game-name {
@@ -24,14 +23,13 @@ header {
 }
 
 #main-container {
-  display: flex;
-  justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #container-question-painting-buttons {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
 }
 
 #container-question {
@@ -99,10 +97,10 @@ button {
 }
 
 #score-h2 {
-  margin-bottom: 0px;
-  margin-top: 0px;
-  padding: 10px;
-  font-size: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 10px;
+    font-size: 20px;
 }
 
 #container-answer {
@@ -127,3 +125,142 @@ button {
     border: none;
 }
 
+
+@media (max-width: 1210px) {
+    #main-container {
+        flex-direction: column-reverse;
+    }
+
+    #container-scoreboard {
+        margin-top: 0px;
+        border-radius: 0px;
+        padding: 20px;
+    }
+
+    #container-question {
+        padding: 0px;
+        margin-top: 20px;
+    }
+
+    #container-scoreboard {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    #container-answer {
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-right: 20px;
+        padding-top: 0px;
+        font-size: 16px;
+    }
+
+    #container-correct-score {
+        display: flex;
+        flex-direction: row-reverse;
+        font-size: 16px;
+    }
+
+    #score-h2 {
+        font-size: 16px;
+    }
+
+    #container-score {
+        font-size: 16px;
+    }
+
+    #container-answer {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 750px) {
+    img {
+        width: 500px;
+    }
+
+    #game-name {
+        font-size: 25px;
+    }
+
+    #container-question {
+        font-size: 16px;
+    }
+
+    button {
+        margin: 20px;
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    #container-scoreboard {
+        font-size: 16px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    #next-question-button {
+        padding: 15px;
+    }
+
+    #container-answer {
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-right: 20px;
+        padding-top: 0px;
+        font-size: 16px;
+    }
+
+    #container-correct-score {
+        display: flex;
+        flex-direction: row-reverse;
+        font-size: 16px;
+    }
+    #container-result-text {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    img {
+        width: 300px;
+    }
+
+    button {
+        margin: 15px;
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+
+    #container-result-text {
+        font-size: 16px;
+    }
+
+    #container-answer {
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-right: 20px;
+        padding-top: 0px;
+        font-size: 12px;
+    }
+
+    #container-correct-score {
+        display: flex;
+        flex-direction: row-reverse;
+        font-size: 12px;
+    }
+
+    #container-scoreboard {
+        font-size: 12px;
+    }
+
+    #score-h2 {
+        font-size: 12px;
+    }
+
+    #container-score {
+        font-size: 12px;
+    }
+}
