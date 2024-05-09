@@ -152,21 +152,21 @@ button {
         justify-content: flex-end;
         padding-right: 20px;
         padding-top: 0px;
-        font-size: 16px;
+        font-size: 20px;
     }
 
     #container-correct-score {
         display: flex;
         flex-direction: row-reverse;
-        font-size: 16px;
+        font-size: 20px;
     }
 
     #score-h2 {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     #container-score {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     #container-answer {
@@ -219,6 +219,14 @@ button {
     }
     #container-result-text {
         font-size: 18px;
+    }
+
+    #score-h2 {
+        font-size: 16px;
+    }
+
+    #container-score {
+        font-size: 16px;
     }
 
 }
