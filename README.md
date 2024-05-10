@@ -74,3 +74,19 @@ This MVP can be enhanced by adding more paintings and randomising the paintings 
 It could also feature more themes, such as 'Guess the movemenent'. 
 
 The design also needs improvement as there is some movement when navigating between questions. 
+
+
+## Code notes
+
+### Code for checking if you got the right answer
+
+There is a query selector and event listener on each mutliple choice button. 
+
+Each of these run a function to check if the answer is correct.
+
+The function checks the inner text of each button using the "this" keyword.
+
+It then compares it against the correct answer which is stored in the artist objects. 
+
+```this.innerText === artists[currentQuestionIndex].correctArtist```
+
