@@ -3,7 +3,7 @@
 ## Background
 
 
-Play '[Guess the artist](https://emmafrith.github.io/guess-the-artist/)' to test your art knowledge. 
+Play [Guess the artist](https://emmafrith.github.io/guess-the-artist/ "Guess the artist") to test your art knowledge. 
 
 I built this quiz as I enjoy art and identifying art based on its style.
 
