@@ -103,3 +103,15 @@ The function adds 1 to the current question index so that it can take data from 
 The inner text of each button is then updated with each new artist:
 
 ```option1.innerText = artists[currentQuestionIndex].artist1```
+
+### Code for restarting the game 
+
+As soon as the user selects their answer on the final question, a function is run to end the game. 
+
+The function works by adding the 'hidden' class to the next question button and removing the 'hidden' classes to the play again button:
+
+```nextQuestionButton.classList.add("hidden")```
+
+```playAgainButton.classList.remove("hidden")```
+
+There is a query selector and event listener on the 'play again' button which then runs a function to reset the data to the first index from the array of objects. 
