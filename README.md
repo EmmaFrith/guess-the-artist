@@ -90,3 +90,16 @@ It then compares it against the correct answer which is stored in the artist obj
 
 ```this.innerText === artists[currentQuestionIndex].correctArtist```
 
+### Code for going to the next question 
+
+There is a query selector and event listener on the 'next question' button. 
+
+This runs a function to move the user to the next question.
+
+The function adds 1 to the current question index so that it can take data from the next object in the array:
+
+```currentQuestionIndex = currentQuestionIndex + 1```
+
+The inner text of each button is then updated with each new artist:
+
+```option1.innerText = artists[currentQuestionIndex].artist1```
